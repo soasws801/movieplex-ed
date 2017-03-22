@@ -1,0 +1,12 @@
+C:\Users\Eric Desrochers\Documents\NetBeansProjects\movieplex\src\main\java\com\soa\movieplex\rest\ApplicationConfig.java
+C:\Users\Eric Desrochers\Documents\NetBeansProjects\movieplex\src\main\java\com\soa\movieplex\rest\MovieFacadeREST.java
+C:\Users\Eric Desrochers\Documents\NetBeansProjects\movieplex\src\main\java\com\soa\movieplex\rest\AbstractFacade.java
+C:\Users\Eric Desrochers\Documents\NetBeansProjects\movieplex\src\main\java\com\soa\movieplex\entities\Timeslot.java
+C:\Users\Eric Desrochers\Documents\NetBeansProjects\movieplex\src\main\java\com\soa\movieplex\rest\TimeslotFacadeREST.java
+C:\Users\Eric Desrochers\Documents\NetBeansProjects\movieplex\src\main\java\com\soa\movieplex\entities\Theater.java
+C:\Users\Eric Desrochers\Documents\NetBeansProjects\movieplex\src\main\java\com\soa\movieplex\rest\TheaterFacadeREST.java
+C:\Users\Eric Desrochers\Documents\NetBeansProjects\movieplex\src\main\java\com\soa\movieplex\client\MovieBackingBean.java
+C:\Users\Eric Desrochers\Documents\NetBeansProjects\movieplex\src\main\java\com\soa\movieplex\client\MovieClientBean.java
+C:\Users\Eric Desrochers\Documents\NetBeansProjects\movieplex\src\main\java\com\soa\movieplex\entities\Movie.java
+C:\Users\Eric Desrochers\Documents\NetBeansProjects\movieplex\src\main\java\com\soa\movieplex\entities\ShowTiming.java
+C:\Users\Eric Desrochers\Documents\NetBeansProjects\movieplex\src\main\java\com\soa\movieplex\rest\ShowTimingFacadeREST.java
