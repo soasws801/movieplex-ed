@@ -6,7 +6,7 @@
 package com.soa.movieplex.client;
 
 import java.io.Serializable;
-import javax.faces.bean.SessionScoped;
+import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 
 /**
@@ -15,7 +15,9 @@ import javax.inject.Named;
  */
 @Named
 @SessionScoped
-public class MovieBackingBean implements  Serializable {
+public class MovieBackingBean implements Serializable {
+
+    int movieId;
 
     public int getMovieId() {
         return movieId;
@@ -24,5 +26,5 @@ public class MovieBackingBean implements  Serializable {
     public void setMovieId(int movieId) {
         this.movieId = movieId;
     }
-    int movieId;
+
 }

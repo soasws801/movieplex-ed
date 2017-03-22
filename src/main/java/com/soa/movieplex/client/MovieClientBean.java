@@ -9,6 +9,7 @@ import com.soa.movieplex.entities.Movie;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
 import javax.inject.Named;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
@@ -22,6 +23,9 @@ import javax.ws.rs.client.WebTarget;
 @RequestScoped
 public class MovieClientBean {
 
+    @Inject
+    MovieBackingBean bean;
+    
     Client client;
     WebTarget target;
 
@@ -38,6 +42,11 @@ public class MovieClientBean {
 
     public Movie[] getMovies() {
         return target.request().get(Movie[].class);
+    }
+
+    public Movie getMovie() {
+        Movie movie = target.path("{movieId}").resolveTemplate("movieId", bean.getMovieId()).request().get(Movie.class);
+        return movie;
     }
 
 }
