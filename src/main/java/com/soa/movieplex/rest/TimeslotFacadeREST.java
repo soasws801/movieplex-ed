@@ -66,6 +66,7 @@ public class TimeslotFacadeREST extends AbstractFacade<Timeslot> {
 
     @GET
     @Override
+    @Path("findall")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public List<Timeslot> findAll() {
         return super.findAll();
@@ -85,9 +86,15 @@ public class TimeslotFacadeREST extends AbstractFacade<Timeslot> {
         return String.valueOf(super.count());
     }
 
+    @GET
+    @Produces({"application/xml", "application/json"})
+    public List<Timeslot> getAll() {
+        return super.findAll();
+    }
+
     @Override
     protected EntityManager getEntityManager() {
         return em;
     }
-    
+
 }

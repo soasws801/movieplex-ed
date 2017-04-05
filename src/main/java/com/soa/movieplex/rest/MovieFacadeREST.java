@@ -66,6 +66,7 @@ public class MovieFacadeREST extends AbstractFacade<Movie> {
 
     @GET
     @Override
+    @Path("findall")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public List<Movie> findAll() {
         return super.findAll();
@@ -85,9 +86,15 @@ public class MovieFacadeREST extends AbstractFacade<Movie> {
         return String.valueOf(super.count());
     }
 
+    @GET
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    public List<Movie> getAll() {
+        return super.findAll();
+    }
+
     @Override
     protected EntityManager getEntityManager() {
         return em;
     }
-    
+
 }

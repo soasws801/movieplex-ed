@@ -23,9 +23,10 @@ import javax.xml.bind.annotation.XmlTransient;
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Theater.findAll", query = "SELECT t FROM Theater t"),
-    @NamedQuery(name = "Theater.findById",
-            query = "SELECT t FROM Theater t WHERE t.id = :id"),
-    @NamedQuery(name = "Theater.findByCapacity", query = "SELECT t FROM Theater t WHERE t.capacity = :capacity")})
+    @NamedQuery(name = "Theater.findById", query = "SELECT t FROM Theater t WHERE t.id = :id"),
+    @NamedQuery(name = "Theater.findByCapacity", query = "SELECT t FROM Theater t WHERE t.capacity = :capacity"),
+    @NamedQuery(name = "Theater.findByName", query = "SELECT t FROM Theater t WHERE t.Name = :name"),
+    @NamedQuery(name = "Theater.findByAddress", query = "SELECT t FROM Theater t WHERE t.Address = :address")})
 public class Theater implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -34,6 +35,10 @@ public class Theater implements Serializable {
     private Integer id;
     @NotNull
     private int capacity;
+    @NotNull
+    private String Name;
+    @NotNull
+    private String Address;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "theater")
     private Collection<ShowTiming> showTimings;
 
@@ -64,6 +69,24 @@ public class Theater implements Serializable {
     public void setCapacity(int capacity) {
         this.capacity = capacity;
     }
+
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    public String getAddress() {
+        return Address;
+    }
+
+    public void setAddress(String Address) {
+        this.Address = Address;
+    }
+    
+    
 
     @XmlTransient
     public Collection<ShowTiming> getShowTimings() {
@@ -99,4 +122,5 @@ public class Theater implements Serializable {
     public String toString() {
         return "Theater[id=" + id + "]";
     }
+    
 }

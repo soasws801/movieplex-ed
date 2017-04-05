@@ -1,4 +1,4 @@
-CREATE TABLE THEATERS ("ID" INTEGER not null primary key,"CAPACITY" INTEGER not null)
+CREATE TABLE THEATERS ("ID" INTEGER not null primary key,"CAPACITY" INTEGER not null, "NAME" VARCHAR(50)not null, "ADDRESS" VARCHAR(100)not null)
 CREATE TABLE MOVIES("ID" INTEGER not null primary key,"NAME"VARCHAR(50)not null, "ACTORS" VARCHAR(200)not null)
 CREATE TABLE TIMESLOTS("ID" INTEGER not null primary key,"START_TIME" VARCHAR(5)not null,"END_TIME"VARCHAR(5)not null)
 CREATE TABLE SHOW_TIMINGS("ID" INTEGER not null primary key,"DAY" INTEGER not null,"THEATER_ID" INTEGER not null,"MOVIE_ID" INTEGER not null,"TIMESLOT_ID" INTEGER not null) 
