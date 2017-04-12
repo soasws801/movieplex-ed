@@ -11,6 +11,7 @@ com\soa\movieplex\rest\ShowTimingFacadeREST.class
 com\soa\movieplex\client\MovieClientBean.class
 com\soa\movieplex\entities\Timeslot.class
 com\soa\movieplex\json\MovieReader.class
+com\soa\movieplex\points\ReceivePointsBean.class
 com\soa\movieplex\client\TheaterBackingBean.class
 com\soa\movieplex\client\TheaterClientBean.class
 com\soa\movieplex\entities\Theater_.class
@@ -20,3 +21,4 @@ com\soa\movieplex\entities\Movie_.class
 com\soa\movieplex\entities\Theater.class
 com\soa\movieplex\entities\Movie.class
 com\soa\movieplex\rest\MovieFacadeREST.class
+com\soa\movieplex\points\SendPointsBean.class
